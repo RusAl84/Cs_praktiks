@@ -3,7 +3,7 @@
 namespace PR1_1
 {
   public enum Genders : int { Male, Female };
-  struct Person
+  class Person
   {
     public string firstName;
     public string lastName;
