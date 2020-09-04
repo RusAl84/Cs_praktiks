@@ -11,7 +11,8 @@ namespace _2
         // С#
         Array.Sort(sa);
         // C#
-        s = string.Join(" ", sa); Console.WriteLine(s);
+        s = string.Join(" ", sa); 
+        Console.WriteLine(s);
 
 
     }
