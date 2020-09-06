@@ -15,7 +15,7 @@ namespace KillComp
         Console.Beep(10000 - 100 * i, 300 - 2 * i);
       }
       Console.Beep(2000, 30*1000);
-      Console.Beep(2000, 30*1000);
+      
     }
   }
 }
