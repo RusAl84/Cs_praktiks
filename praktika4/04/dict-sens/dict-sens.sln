@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dict-sens", "dict-sens.csproj", "{20B329D1-B355-429C-ADE1-2443C209659F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20B329D1-B355-429C-ADE1-2443C209659F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B329D1-B355-429C-ADE1-2443C209659F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B329D1-B355-429C-ADE1-2443C209659F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B329D1-B355-429C-ADE1-2443C209659F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B84F2E14-EA7B-471E-B6CB-3E21743BA98F}
+	EndGlobalSection
+EndGlobal
