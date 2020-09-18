@@ -6,13 +6,17 @@ namespace _2
   {
     static void Main(string[] args)
     {
-        string s = "Microsoft .NET Framework 2.0 Application Development Foundation";
+        string s = "Microsoft      .NET Framework 2.0    Application Development Foundation";
         string[] sa = s.Split(' ');
-        // С#
+
         Array.Sort(sa);
-        // C#
+        foreach(string item in sa)
+            {
+                Console.WriteLine(item);
+            }
         s = string.Join(" ", sa); 
         Console.WriteLine(s);
+            Console.ReadLine();
 
 
     }
