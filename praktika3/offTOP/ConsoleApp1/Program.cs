@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Text.RegularExpressions;
 
 namespace ConsoleApp1
@@ -7,18 +8,17 @@ namespace ConsoleApp1
   {
     static void Main(string[] args)
     {
-      string[] text ={"АРТЕМ",
+      string[] text ={"SASHA",
         "LOVE",
-        "ВАЗЕЛИН",
-        "CONTEX",
         "C++",
         " +79263772622",
         " 89263772622",
         " (926)3772622" };
 
-      //string str56 = "c:\vazelin\artem\nude_photos";
-      string str56 = $"stringi {text[0]}A";
+      string str56 = @"c:\vazelin\nsasha\nude_photos";
+      // str56 = $"stringi {text[0]} velikolepni ";
       Console.WriteLine(str56);
+
 
 
       foreach (string item in text)
@@ -26,7 +26,7 @@ namespace ConsoleApp1
         string pattern = @"\d{7}";
         if (Regex.IsMatch(item, pattern))
         {
-          //Console.WriteLine($"{item} это телефон"); 
+ 
           Console.WriteLine(item +" это телефон");
         }
         else
@@ -35,9 +35,8 @@ namespace ConsoleApp1
             string.Format("{0} это НЕ телефон", item)
             );
         }
-
       }
-      
+      Console.ReadLine();
     }
   }
 }
