@@ -37,40 +37,45 @@ namespace ViewFile
             // 
             // locationTextBox
             // 
-            this.locationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.locationTextBox.Location = new System.Drawing.Point(70, 12);
+            this.locationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.locationTextBox.Location = new System.Drawing.Point(93, 15);
+            this.locationTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(305, 20);
+            this.locationTextBox.ReadOnly = true;
+            this.locationTextBox.Size = new System.Drawing.Size(405, 22);
             this.locationTextBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Location:";
             // 
             // displayTextBox
             // 
-            this.displayTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.displayTextBox.Location = new System.Drawing.Point(12, 38);
+            this.displayTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.displayTextBox.Location = new System.Drawing.Point(16, 47);
+            this.displayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.displayTextBox.Multiline = true;
             this.displayTextBox.Name = "displayTextBox";
             this.displayTextBox.ReadOnly = true;
-            this.displayTextBox.Size = new System.Drawing.Size(535, 432);
+            this.displayTextBox.Size = new System.Drawing.Size(712, 531);
             this.displayTextBox.TabIndex = 2;
             // 
             // browseButton
             // 
             this.browseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.browseButton.Location = new System.Drawing.Point(381, 13);
+            this.browseButton.Location = new System.Drawing.Point(508, 16);
+            this.browseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(84, 23);
+            this.browseButton.Size = new System.Drawing.Size(112, 28);
             this.browseButton.TabIndex = 3;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = true;
@@ -79,9 +84,10 @@ namespace ViewFile
             // showButton
             // 
             this.showButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.showButton.Location = new System.Drawing.Point(471, 12);
+            this.showButton.Location = new System.Drawing.Point(628, 15);
+            this.showButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(75, 23);
+            this.showButton.Size = new System.Drawing.Size(100, 28);
             this.showButton.TabIndex = 4;
             this.showButton.Text = "View file";
             this.showButton.UseVisualStyleBackColor = true;
@@ -89,15 +95,16 @@ namespace ViewFile
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 482);
+            this.ClientSize = new System.Drawing.Size(745, 593);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.displayTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.locationTextBox);
-            this.MinimumSize = new System.Drawing.Size(250, 150);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(327, 174);
             this.Name = "Form1";
             this.Text = "View File";
             this.ResumeLayout(false);
