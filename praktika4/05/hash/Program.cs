@@ -8,7 +8,11 @@ namespace hash
     static void Main(string[] args)
     {
       Dictionary<int, String> countryLookup = new Dictionary<int, String>();
-      countryLookup[44] = "United Kingdom"; countryLookup[33] = "France"; countryLookup[31] = "Netherlands"; countryLookup[55] = "Brazil"; //countryLookup["64"] = "New Zealand";
+      countryLookup[44] = "United Kingdom"; 
+      countryLookup[33] = "France"; 
+      countryLookup[31] = "Netherlands"; 
+      countryLookup[55] = "Brazil"; 
+      //countryLookup["64"] = "New Zealand";
 
       Console.WriteLine("The 33 Code is for: {0}", countryLookup[33]);
       foreach (KeyValuePair<int, String> item in countryLookup)

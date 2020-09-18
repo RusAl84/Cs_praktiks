@@ -9,8 +9,8 @@ namespace prak4_02_upr01
     {
       Queue queue = new Queue();
 
-      queue.Enqueue("МАКС");
-      queue.Enqueue("F11");
+      queue.Enqueue("ARTEM");
+      queue.Enqueue("DIMA");
       queue.Enqueue("LOVE C++");
       queue.Enqueue("***");
 

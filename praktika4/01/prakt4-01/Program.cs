@@ -9,16 +9,17 @@ namespace prakt4_01
       static void Main(string[] args)
       {
         ArrayList myList = new ArrayList();
-        myList.Add("First");
-        myList.Add("Second");
-        myList.Add("Third");
-        myList.Add("Fourth");
+        myList.Add("DIMA");
+        myList.Add("ARTEM");
+        myList.Add("HENESSY");
+        myList.Add("assembler");
         foreach (string item in myList)
         {
           Console.WriteLine("Unsorted: {0}", item);
         }
         // Сортировка при помощи стандартного объекта сравнения 
         myList.Sort();
+        myList.Reverse();
         foreach (string item in myList)
         {
           Console.WriteLine("   Sorted: {0}", item);

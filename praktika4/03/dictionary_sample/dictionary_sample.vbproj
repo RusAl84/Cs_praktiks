@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>dictionary_sample</RootNamespace>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-
-</Project>
