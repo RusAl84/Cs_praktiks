@@ -8,7 +8,7 @@ namespace prakt4_01
 
       static void Main(string[] args)
       {
-        ArrayList myList = new ArrayList();
+        ArrayList myList = new ArrayList() { "PURGEN"};
         myList.Add("DIMA");
         myList.Add("ARTEM");
         myList.Add("HENESSY");
@@ -19,7 +19,7 @@ namespace prakt4_01
         }
         // Сортировка при помощи стандартного объекта сравнения 
         myList.Sort();
-        myList.Reverse();
+        //myList.Reverse();
         foreach (string item in myList)
         {
           Console.WriteLine("   Sorted: {0}", item);

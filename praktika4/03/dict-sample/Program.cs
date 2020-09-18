@@ -19,8 +19,9 @@ namespace dict_sample
       lookup["7"] = "семь";
       lookup["8"] = "Eight";
       lookup["9"] = "девять";
+      lookup["+"] = "плюс";
 
-      string ourNumber = "926-377-2622";
+      string ourNumber = "+7926-377-2622";
       foreach (char c in ourNumber)
       {
         string digit = c.ToString(); 
