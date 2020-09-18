@@ -13,6 +13,7 @@ namespace CreateStruct
 
             Manager m = new Manager("Tony", "Allen", 32, Manager.Genders.Male, "555-555-1212", "123b");
             Console.WriteLine(m);
+            Console.ReadLine();
         }
 
         class Person
