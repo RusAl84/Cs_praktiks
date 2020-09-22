@@ -4,6 +4,8 @@ from ast import literal_eval
 
 n= np.zeros([2,3])
 print(n[1,2])
+
+
 s=['Andrey','Oleg','Valera']
 n = 3
 ss = []

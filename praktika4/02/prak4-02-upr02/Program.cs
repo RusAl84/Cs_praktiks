@@ -15,11 +15,11 @@ namespace prak4_02_upr02
       stack.Push("EGOR5");
       stack.Push("MAXIM");
       stack.Push("ANDREY");
-            while (stack.Count > 1)
+            while (stack.Count > 0)
             {
                 object obj = stack.Pop();
                 Console.WriteLine("'From Stack: {0}", obj);
-                Console.WriteLine("SEDIT: {0}", stack.Peek());
+                //Console.WriteLine("SEDIT: {0}", stack.Peek());
             }
 
     }
