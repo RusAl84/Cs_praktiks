@@ -38,7 +38,7 @@ namespace PR1_1
         {
             Person p = new Person("Rusakov", "Alexey", 35,"sekret_fvv");
             Person p1 = new Person("Rusakov", "Alexey");
-            Person p2 = new Person("Rusakov", "Alexey", 35, "global 2GB");
+            Person p2 = new Person("Rusakov", "Alexey", 35, "MAKSIK");
             Console.WriteLine(p);
             Console.WriteLine(p1);
             Console.WriteLine(p2);

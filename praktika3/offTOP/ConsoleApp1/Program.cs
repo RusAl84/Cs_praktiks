@@ -11,6 +11,7 @@ namespace ConsoleApp1
       string[] text ={"DANYA",
         "LOVE",
         "C++",
+        "Contex",
         " +79263772622",
         " 89263772622",
         " (926)3772622" };

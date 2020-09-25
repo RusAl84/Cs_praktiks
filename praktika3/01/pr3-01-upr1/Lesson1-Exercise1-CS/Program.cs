@@ -21,7 +21,9 @@ namespace Lesson1_Exercise1_CS
             foreach (string s in input)
             {
                 if (IsPhone(s)) Console.WriteLine(s + " is a phone number");
+
                 else if (IsZip(s)) Console.WriteLine(s + " is a zip code");
+
                 else Console.WriteLine(s + " is unknown");
             }
       Console.ReadLine();
