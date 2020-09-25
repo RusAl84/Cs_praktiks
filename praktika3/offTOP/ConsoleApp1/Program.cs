@@ -8,7 +8,7 @@ namespace ConsoleApp1
   {
     static void Main(string[] args)
     {
-      string[] text ={"Gosha",
+      string[] text ={"Sasha",
         "LOVE",
         "Contex",
         "C++",
