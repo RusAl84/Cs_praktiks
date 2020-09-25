@@ -16,7 +16,7 @@ namespace ConsoleApp1
         " 89263772622",
         " (926)3772622" };
 
-     //string str56 = @"c:\vazelin\nGosha\nude_photos";
+     //string str56 = "c:\\vazelin\\nSasha\\nude_photos";
      //string str56 = $"stringi {text[0]} velikolepni ";
      //Console.WriteLine(str56);
 
