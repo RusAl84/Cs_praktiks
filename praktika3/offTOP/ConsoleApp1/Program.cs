@@ -8,14 +8,15 @@ namespace ConsoleApp1
   {
     static void Main(string[] args)
     {
-      string[] text ={"Andrey",
+      string[] text ={"Gosha",
         "LOVE",
+        "Contex",
         "C++",
         " +79263772622",
         " 89263772622",
         " (926)3772622" };
 
-     //string str56 = @"c:\vazelin\nDANYA\nude_photos";
+     //string str56 = @"c:\vazelin\nGosha\nude_photos";
      //string str56 = $"stringi {text[0]} velikolepni ";
      //Console.WriteLine(str56);
 
