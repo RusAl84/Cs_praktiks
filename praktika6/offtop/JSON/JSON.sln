@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON", "JSON.csproj", "{5270CAD0-735C-4559-BE5B-B75C13B92DEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D43FCBBC-F863-4099-93FD-2624BD035BE0}"
+	ProjectSection(SolutionItems) = preProject
+		Class1.cs = Class1.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5270CAD0-735C-4559-BE5B-B75C13B92DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5270CAD0-735C-4559-BE5B-B75C13B92DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5270CAD0-735C-4559-BE5B-B75C13B92DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5270CAD0-735C-4559-BE5B-B75C13B92DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F57B68B-7F7B-40EA-BF17-629C47AC1301}
+	EndGlobalSection
+EndGlobal
