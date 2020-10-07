@@ -18,6 +18,7 @@ namespace Serialize_People
             {
                 // If they provide no arguments, display the last person
                 Person p = Deserialize();
+                Console.WriteLine("class Deserialize");
                 Console.WriteLine(p.ToString());
             }
             else
