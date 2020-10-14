@@ -9,21 +9,25 @@ namespace prakt4_01
         static void Main(string[] args)
         {
 
-            ArrayList myList = new ArrayList(); 
-            myList.Add("Вася"); 
-            myList.Add("Ваня");
-            myList.Add("Вика");
-            myList.Add("Вова");
-            foreach (string item in myList)
-            {
-                Console.WriteLine("Unsorted: {0}", item);
-            }
-            // Сортировка при помощи стандартного объекта сравнения 
-            myList.Sort();
-            foreach (string item in myList)
-            {
-                Console.WriteLine("   Sorted: {0}", item);
-            }
+            //ArrayList myList = new ArrayList(); 
+            //myList.Add("Вася"); 
+            //myList.Add("Ваня");
+            //myList.Add("Вика");
+            //myList.Add("Вова");
+            //foreach (string item in myList)
+            //{
+            //    Console.WriteLine("Unsorted: {0}", item);
+            //}
+            //// Сортировка при помощи стандартного объекта сравнения 
+            //myList.Sort();
+            //foreach (string item in myList)
+            //{
+            //    Console.WriteLine("   Sorted: {0}", item);
+            //}
+
+            krippa kr = new krippa("Даня",8,16);
+            kr.bolt = 10;
+
 
 
         }
