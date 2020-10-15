@@ -11,8 +11,8 @@ public class message
 
     public message()
     {
-        this.username = "username";
-        this.text = "text";
+        this.username = "Server";
+        this.text = "Server is running...";
         this.timestamp = DateTime.UtcNow;
     }
 
@@ -57,15 +57,15 @@ public class MessagesClass
 	{
         messages.Clear();
         message ms = new message();
-        for (int i = 0; i < 10; i++)
-            messages.Add(ms);
+        //for (int i = 0; i < 10; i++)
+        messages.Add(ms);
     }
 
     public MessagesClass(List<message> messages)
     {
 		messages.Clear();
 		message ms = new message();
-        for(int i=0; i<10;i++)
+        //for(int i=0; i<10;i++)
         messages.Add(ms);
 	}
 
