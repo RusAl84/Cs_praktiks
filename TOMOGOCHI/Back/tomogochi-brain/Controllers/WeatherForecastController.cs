@@ -23,12 +23,6 @@ namespace tomogochi_brain.Controllers
             _logger = logger;
         }
 
-        public string Square(int a = 10, int h = 3)
-        {
-            double s = a * h / 2.0;
-            return "<h2>Площадь треугольника с основанием " + a +
-                    " и высотой " + h + " равна " + s + "</h2>";
-        }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()

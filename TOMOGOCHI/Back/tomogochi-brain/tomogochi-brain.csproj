@@ -5,5 +5,9 @@
     <RootNamespace>tomogochi_brain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  </ItemGroup>
+
 
 </Project>

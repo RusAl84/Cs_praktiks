@@ -13,6 +13,7 @@ namespace tomogochi_brain
     {
         public static void Main(string[] args)
         {
+
             CreateHostBuilder(args).Build().Run();
         }
 
