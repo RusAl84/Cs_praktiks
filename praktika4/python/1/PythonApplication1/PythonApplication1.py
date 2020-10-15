@@ -1,13 +1,14 @@
 
 s=["Максим","Данила","Вика", "Саша"]
-ss=[[] for i in range(4)]
+#ss=[[] for i in range(4)]
 
-#ss=[]
-#for i in range(4):
-#    ss.append([])
+ss=[]
+for i in range(4):
+    ss.append([])
 
 for i in range(4):
     print(ss[i])
+
 
 #for i in range(4):
 #    for j in s:
