@@ -22,6 +22,8 @@ namespace tomogochi_brain
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://192.168.51.57:5000", "http://localhost:5000");
+                    //"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="d:\temp"
                 });
     }
 }
