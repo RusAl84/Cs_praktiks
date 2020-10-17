@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace tomogochi_brain
+namespace API_server
 {
     public class Startup
     {
@@ -26,15 +25,6 @@ namespace tomogochi_brain
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsApi",
-                    builder => builder.WithOrigins("http://localhost:8080", "http://rusakovam.su:8080")
-                .AllowAnyHeader()
-                .AllowAnyMethod());
-            });
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,14 +36,12 @@ namespace tomogochi_brain
             }
 
             app.UseRouting();
-            app.UseCors("CorsApi");
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                
             });
         }
     }
