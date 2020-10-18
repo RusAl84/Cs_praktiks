@@ -47,9 +47,7 @@ namespace tomogochi_brain
 
             app.UseRouting();
             app.UseCors("CorsApi");
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
