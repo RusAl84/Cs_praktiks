@@ -70,7 +70,7 @@ namespace PieChart
                 // Calculate the degrees that this section will consume,
                 // based on the percentage of the total
                 float sweepAngle = (e.value / total) * 360;
-                 p = new Pen(Color.Violet, 5);
+                 p = new Pen(Color.BlueViolet, 5);
                 // Draw the pie shape
                 g.DrawPie(p, rect, startAngle, sweepAngle);
 

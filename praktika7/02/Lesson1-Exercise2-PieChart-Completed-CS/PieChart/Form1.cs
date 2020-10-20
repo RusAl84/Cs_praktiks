@@ -36,7 +36,7 @@ namespace PieChart
 
         private Image drawPieChart(ArrayList elements, Size s)
         {
-            Color[] colors = { Color.Red, Color.Violet, Color.Pink, Color.FromArgb(0xAA00FF), 
+            Color[] colors = { Color.Red, Color.Violet, Color.Black, Color.FromArgb(0xAA00FF), 
                 Color.Lavender, Color.Indigo, Color.DarkSalmon, Color.DarkRed, 
                 Color.DarkOrange, Color.DarkSalmon, Color.DarkGreen, 
                 Color.DarkBlue, Color.Lavender, Color.LightBlue, Color.Coral };
