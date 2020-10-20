@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
 
         public Shot(Point pos) {
             this.pos = pos;
-            this.lifeTime = 30;
+            this.lifeTime = 50;
         }
     }
 
