@@ -12,7 +12,6 @@ namespace SimpleThreadingDemo
             {
                 Console.WriteLine("Count: {0} - Thread {1} ", i, Thread.CurrentThread.ManagedThreadId); 
                 Thread.Sleep(rand.Next(100, 300));
-
                 Console.Beep(2020- 2*10*i, rand.Next(50,300));
             }
         }
