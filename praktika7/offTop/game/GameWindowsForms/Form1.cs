@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace GameWindowsForms
 {
     // Класс игрока
-    public class Player {
+        public class Player {
         public PointF pos;
         public PointF acc;
         public float speed = 5f;
