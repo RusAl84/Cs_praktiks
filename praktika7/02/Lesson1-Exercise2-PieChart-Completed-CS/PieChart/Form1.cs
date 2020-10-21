@@ -36,7 +36,7 @@ namespace PieChart
 
         private Image drawPieChart(ArrayList elements, Size s)
         {
-            Color[] colors = { Color.Red, Color.Violet, Color.Black, Color.FromArgb(0xAA00FF), 
+            Color[] colors = { Color.Red, Color.Violet, Color.Aqua, Color.FromArgb(0xAA00FF), 
                 Color.Lavender, Color.Indigo, Color.DarkSalmon, Color.DarkRed, 
                 Color.DarkOrange, Color.DarkSalmon, Color.DarkGreen, 
                 Color.DarkBlue, Color.Lavender, Color.LightBlue, Color.Coral };
@@ -80,8 +80,8 @@ namespace PieChart
             foreach (PieChartElement e in elements)
             {
                 // Create a brush with a nice gradient
-                //Brush b = new LinearGradientBrush(rect, colors[colorNum++], Color.White, (float)45);
-                Brush b = new SolidBrush(colors[colorNum++]);
+                Brush b = new LinearGradientBrush(rect, colors[colorNum++], Color.White, (float)45);
+                //Brush b = new SolidBrush(colors[colorNum++]);
                 
                 // Calculate the degrees that this section will consume,
                 // based on the percentage of the total

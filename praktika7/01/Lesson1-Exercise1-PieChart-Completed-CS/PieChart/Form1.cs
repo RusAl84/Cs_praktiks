@@ -57,7 +57,9 @@ namespace PieChart
             }
 
             // Define the rectangle that the pie chart will use
-            Rectangle rect = new Rectangle(1, 1, s.Width - 2, s.Height - 2);
+          //  Rectangle rect = new Rectangle(1, 1, 800 - 2, 400 - 2);
+           // Rectangle rect = new Rectangle(1, 1, s.Width - 2, s.Height - 2);
+            Rectangle rect = new Rectangle(1, 1, s.Width - 20, s.Height - 20);
 
             Pen p = new Pen(Color.Black, 1);
 
@@ -65,19 +67,20 @@ namespace PieChart
             float startAngle = 0;
 
             // Draw each of the pie shapes
-            foreach (PieChartElement e in elements)
-            {
-                // Calculate the degrees that this section will consume,
-                // based on the percentage of the total
-                float sweepAngle = (e.value / total) * 360;
-                 p = new Pen(Color.Red, 1);
+            //foreach (PieChartElement e in elements)
+            //{
+            //    // Calculate the degrees that this section will consume,
+            //    // based on the percentage of the total
+            //    float sweepAngle = (e.value / total) * 360;
+                 p = new Pen(Color.Violet, 5);
                 // Draw the pie shape
-                g.DrawPie(p, rect, startAngle, sweepAngle);
+                g.DrawPie(p, rect, 30, 320);
+             //   g.DrawPie(p, rect, startAngle, sweepAngle);
 
                 // Calculate the angle for the next pie shape by adding
                 // the current shape's degrees to the previous total.
-                startAngle += sweepAngle;
-            }
+           //     startAngle += sweepAngle;
+           // }
             return bm;
         }
 
