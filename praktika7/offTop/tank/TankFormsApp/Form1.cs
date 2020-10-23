@@ -23,8 +23,8 @@ namespace TankFormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int fps = (int)(1000 / 30);
-            timer1.Interval = ee/2;
+            int fps = (int)(1000 / 500);
+            timer1.Interval = fps;
             ee = 45;
             otkr = true;
 
