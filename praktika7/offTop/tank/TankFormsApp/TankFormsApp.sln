@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankFormsApp", "TankFormsApp.csproj", "{816C72E0-B2FC-4715-9B72-99D65C4E0DDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{816C72E0-B2FC-4715-9B72-99D65C4E0DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816C72E0-B2FC-4715-9B72-99D65C4E0DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816C72E0-B2FC-4715-9B72-99D65C4E0DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816C72E0-B2FC-4715-9B72-99D65C4E0DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3310E251-BFC8-4719-8020-0B95D171BE8F}
+	EndGlobalSection
+EndGlobal
