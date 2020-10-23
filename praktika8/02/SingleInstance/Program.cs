@@ -28,7 +28,7 @@ namespace SingleInstance
                 oneMutex.Close();
                 return;
             }
-            Console.WriteLine("Our Application");
+            Console.WriteLine("Our Application is running...");
             Console.Read();
         }
     }

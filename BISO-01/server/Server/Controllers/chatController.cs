@@ -25,10 +25,10 @@ namespace Server.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            string json = "not found";
+            string json = "Not found";
             if ((id < ms.messages.Count) && (id >= 0))
             {
-                json = JsonSerializer.Serialize(ms.messages.ElementAt(id));
+                json = JsonSerializer.Serialize(ms.Get(id));
             }
             return json.ToString();
         }

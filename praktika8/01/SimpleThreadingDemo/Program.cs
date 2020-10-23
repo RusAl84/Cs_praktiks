@@ -5,13 +5,14 @@ namespace SimpleThreadingDemo
 {
     class Program
     {
+
         static void Counting() {
 
             Random rand = new Random();
             for (int i=0;i<100; i++)
             {
                 Console.WriteLine("Count: {0} - Thread {1} ", i, Thread.CurrentThread.ManagedThreadId); 
-                Thread.Sleep(rand.Next(100, 300));
+                Thread.Sleep(rand.Next(10, 500));
                 Console.Beep(2020- 2*10*i, rand.Next(50,300));
             }
         }

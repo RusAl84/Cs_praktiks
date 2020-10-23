@@ -38,18 +38,23 @@ public class MessagesClass
         Console.WriteLine(messages.Count);
     }
 
-        public void Add(string username, string text)
-        {
-            message msg = new message(username, text);
-            messages.Add(msg);
-            Console.WriteLine(messages.Count);
-        }
+    public void Add(string username, string text)
+    {
+        message msg = new message(username, text);
+        messages.Add(msg);
+        Console.WriteLine(messages.Count);
+    }
+
+    public message Get(int id)
+    {
+            return messages.ElementAt(id);
+    }
+
 
     public MessagesClass()
     {
         messages.Clear();
         message ms = new message();
-        //for (int i = 0; i < 10; i++)
         messages.Add(ms);
     }
 
@@ -57,7 +62,6 @@ public class MessagesClass
     {
         messages.Clear();
         message ms = new message();
-        //for(int i=0; i<10;i++)
         messages.Add(ms);
     }
 
