@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class chatController : ControllerBase
+    public class ChatController : ControllerBase
     {
         static MessagesClass ms = new MessagesClass();
 
-        // GET api/<chatController>/5
+        // GET api/<ChatController>/5
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -30,6 +31,7 @@ namespace Server.Controllers
             return NotFound();
         }
 
+
         // POST api/<chatController>
         [HttpPost]
         public void Post([FromBody] message msg)
@@ -37,5 +39,7 @@ namespace Server.Controllers
             ms.Add(msg);
             Console.WriteLine($"{msg.username}:  {msg.text} ({ms.messages.Count})");
         }
+
+
     }
 }
