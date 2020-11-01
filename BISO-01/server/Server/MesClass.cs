@@ -1,7 +1,9 @@
 ﻿using Server;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Server
@@ -51,6 +53,12 @@ public class MessagesClass
     }
 
 
+    public int GetCountMessages()
+    {
+        return messages.Count;
+    }
+
+
     public MessagesClass()
     {
         messages.Clear();
@@ -58,11 +66,15 @@ public class MessagesClass
         messages.Add(ms);
     }
 
-    public MessagesClass(List<message> messages)
+    public void SaveData()
     {
-        messages.Clear();
-        message ms = new message();
-        messages.Add(ms);
+            Console.WriteLine("Save messages");
+            // сохранение данных
+            using (FileStream fs = new FileStream("server_data.json", FileMode.OpenOrCreate))
+            {
+                JsonSerializer.SerializeAsync<MessagesClass>(fs, this);
+                Console.WriteLine("Data has been saved to file");
+            }
     }
 
     public override string ToString()
