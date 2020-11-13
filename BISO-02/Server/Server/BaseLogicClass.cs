@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -93,14 +94,49 @@ namespace Server
 
   public class SessionsClass
   {
-    public List<tokens> tokens = new List<tokens>();
-
-    public int SaveToFile(string filename = "data.json")
+    public List<tokens> list_tokens = new List<tokens>();
+    
+    public void add()
     {
-      tokens token = new tokens(1, "username", "Valera");
-      string Data = JsonConvert.SerializeObject(tokens);
-      return -1;
+      tokens token = new tokens(515, "Valera", "UWP");
+      list_tokens.Add(token);
+    }
 
+    public void SaveToFile(string filename = "data_sessions.json")
+    {
+      try
+      {
+        string Data = JsonConvert.SerializeObject(Program.Sessions);
+        Console.WriteLine("Dannie vigruzheni");
+
+        using (StreamWriter sw = new StreamWriter(filename, false, System.Text.Encoding.Default))
+        {
+          sw.WriteLine(Data);
+        }
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
+
+    }
+
+    public void LoadFromFile(string filename = "data_sessions.json")
+    {
+      try
+      {
+        Console.WriteLine("Dannie vigruzheni");
+        string json = "";
+        using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
+        {
+          json = sr.ReadToEnd();
+        }
+        SessionsClass ses  =  JsonConvert.DeserializeObject<SessionsClass>(json);
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
     }
   }
 

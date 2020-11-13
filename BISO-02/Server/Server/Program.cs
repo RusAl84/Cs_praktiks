@@ -13,11 +13,13 @@ namespace Server
     public class Program
     {
     public static MessagesClass ms;
+    public static SessionsClass Sessions;
 
     public static void Main(string[] args)
         {
             ms = new MessagesClass();
-
+            Sessions = new SessionsClass();
+            Sessions.add();
             CreateHostBuilder(args).Build().Run();
         }
 

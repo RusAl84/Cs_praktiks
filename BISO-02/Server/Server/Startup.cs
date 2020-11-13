@@ -64,18 +64,13 @@ namespace Server
 
       protected void OnApplicationStopping()
       {
-      string writePath = @"D:\temp\1\config.txt";
-      Console.WriteLine("Dannie vigruzheni");
-      using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
-      {
-        Console.WriteLine("UWP");
-        sw.WriteLine("UWP");
+      Program.Sessions.SaveToFile();
       }
-    }
 
       protected void OnApplicationStopped()
       {
-       }
+       
+      }
 
   }
 }
