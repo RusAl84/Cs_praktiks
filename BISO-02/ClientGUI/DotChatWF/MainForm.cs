@@ -16,7 +16,13 @@ namespace DotChatWF
 
     public partial class MainForm : Form
     {
+        
+        // Глобальные переменные
         int lastMsgID = 0;
+        AuthentificationForm AuthForm;
+        RegistartionForm RegForm;
+        int Token;
+
 
         public MainForm()
         {
@@ -73,7 +79,23 @@ namespace DotChatWF
 
     private void btnAuth_Click(object sender, EventArgs e)
     {
+      AuthForm.Show();
+      this.Visible = false;
+    }
 
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+      Token = 0;
+      AuthForm = new AuthentificationForm();
+      RegForm = new RegistartionForm();
+
+    }
+
+    private void btnReg_Click(object sender, EventArgs e)
+    {
+      RegForm.mForm = this;
+      RegForm.Show();
+      this.Visible = false;
     }
   }
   [Serializable]
