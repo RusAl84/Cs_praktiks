@@ -14,18 +14,17 @@ namespace Server.Controllers
     [ApiController]
     public class ChatController : ControllerBase
     {
-        static MessagesClass ms = new MessagesClass();
-
         // GET api/<ChatController>/5
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<string> Get(int id)
         {
+
             string json = "Not found";
-            if ((id < ms.GetCountMessages()) && (id >= 0))
+            if ((id < Program.ms.GetCountMessages()) && (id >= 0))
             {
-                json = JsonSerializer.Serialize(ms.Get(id));
+                json = JsonSerializer.Serialize(Program.ms.Get(id));
                 return json.ToString();
             }
             return NotFound();
@@ -36,8 +35,8 @@ namespace Server.Controllers
         [HttpPost]
         public void Post([FromBody] message msg)
         {
-            ms.Add(msg);
-            Console.WriteLine($"{msg.username}:  {msg.text} ({ms.messages.Count})");
+            Program.ms.Add(msg);
+            Console.WriteLine($"{msg.username}:  {msg.text} ({Program.ms.messages.Count})");
         }
 
 

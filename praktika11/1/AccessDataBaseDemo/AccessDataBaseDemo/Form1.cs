@@ -45,7 +45,7 @@ namespace AccessDataBaseDemo
         private void selectButton1_Click(object sender, EventArgs e)
         {
             // текст запроса
-            string query = "SELECT w_name FROM Worker WHERE w_id = 1";
+            string query = "SELECT w_name FROM Worker WHERE w_salary > 20000";
 
             // создаем объект OleDbCommand для выполнения запроса к БД MS Access
             OleDbCommand command = new OleDbCommand(query, myConnection);
@@ -84,7 +84,7 @@ namespace AccessDataBaseDemo
         private void insertButton_Click(object sender, EventArgs e)
         {
             // текст запроса
-            string query = "INSERT INTO Worker (w_name, w_position, w_salary) VALUES ('Артем Ч', 'Водитель', 20000)";
+            string query = "INSERT INTO Worker (w_name, w_position, w_salary) VALUES ('Валера', 'Технолог UWP', 40000)";
 
             // создаем объект OleDbCommand для выполнения запроса к БД MS Access
             OleDbCommand command = new OleDbCommand(query, myConnection);

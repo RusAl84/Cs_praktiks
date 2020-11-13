@@ -39,11 +39,18 @@ namespace DotChatWF
         }
 
         private void btnSend_Click(object sender, EventArgs e) {
+            if (Token == 0)
+      {
+        MessageBox.Show("Please log in or register");
+      }
+      else 
+      { 
             SendMessage(new Message() { 
                 username = fieldUsername.Text,
                 text = fieldMessage.Text,
             });
-        }
+      }
+    }
 
         // Отправляет сообщение на сервер
         void SendMessage(Message msg)
