@@ -23,5 +23,10 @@ namespace BISO_chat
     {
       authorization = textBox1.Text;
     }
+
+    private void Form2_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show("больно");
+    }
   }
 }
