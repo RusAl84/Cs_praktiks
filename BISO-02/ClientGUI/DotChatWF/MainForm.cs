@@ -13,19 +13,12 @@ using System.Windows.Forms;
 
 namespace DotChatWF
 {
-    [Serializable]
-    public class Message
-    {
-        public string username = "";
-        public string text = "";
-        public DateTime timestamp;
-    }
 
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         int lastMsgID = 0;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -77,5 +70,17 @@ namespace DotChatWF
                 return null;
             }
         }
+
+    private void btnAuth_Click(object sender, EventArgs e)
+    {
+
+    }
+  }
+  [Serializable]
+    public class Message
+    {
+        public string username = "";
+        public string text = "";
+        public DateTime timestamp;
     }
 }
