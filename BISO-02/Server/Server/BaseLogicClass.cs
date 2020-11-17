@@ -105,6 +105,12 @@ namespace Server
       list_tokens.Add(token_record);
     }
 
+    public int GenToken()
+    {
+      Random rand = new Random();
+      return rand.Next(10 * 1000 , 100 * 1000 );
+    }
+
     public int login(AuthData auth_data)
     {
       string login = auth_data.login;
@@ -117,8 +123,8 @@ namespace Server
           login_exist = true;
           if (item.password == password)
           {
-            Random rand = new Random();
-            int token = rand.Next(1000 * 1000, 10 * 1000 * 1000);
+
+            int token = GenToken();
             tokens record_token = new tokens(token, login, password);
             list_tokens.Add(record_token);
             Console.WriteLine($"аутификация успешно login: {login} password: {password} token: {token}");
@@ -139,24 +145,36 @@ namespace Server
 
     public int registration(AuthData auth_data)
     {
-      string login = auth_data.login;
-      string password = auth_data.password;
-      Random rand = new Random();
-      int token = rand.Next(1000 * 10, 10 * 1000 * 10);
-      tokens record_token = new tokens(token, login, password);
-      list_tokens.Add(record_token);
-      Console.WriteLine($"Регистрация успешно login: {login} password: {password} token: {token}");
-      return token;
+      bool login_exist = false;
+      foreach (tokens item in list_tokens)
+      {
+        if (item.login == auth_data.login)
+        {
+          login_exist = true;
+        }
+      }
+      if (!login_exist) 
+      { 
+        int token = GenToken();
+        tokens record_token = new tokens(token, auth_data.login, auth_data.password);
+        list_tokens.Add(record_token);
+        Console.WriteLine($"Регистрация успешно login: {auth_data.login} password: {auth_data.password} token: {token}");
+        return token;
+      }
+      return -1;
     }
 
 
     public void SaveToFile(string filename = "data_sessions.json")
     {
-      Console.WriteLine("Dannie vigruzheni");
+      if (File.Exists(filename))
+      {
+        File.Delete(filename);
+      }
+
       try
       {
         string Data = JsonConvert.SerializeObject(Program.Sessions);
-        Console.WriteLine("Dannie vigruzheni");
 
         using (StreamWriter sw = new StreamWriter(filename, false, System.Text.Encoding.Default))
         {
@@ -172,22 +190,35 @@ namespace Server
 
     public void LoadFromFile(string filename = "data_sessions.json")
     {
-      try
-      {
-        //Console.WriteLine("Dannie vigruzheni");
-        string json = "";
-        using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
-        {
-          json = sr.ReadToEnd();
-        }
-        Program.Sessions = JsonConvert.DeserializeObject<SessionsClass>(json);
+      long size = 0;
+      if (File.Exists(filename)) 
+      { 
+       System.IO.FileInfo file = new System.IO.FileInfo(filename);
+       size = file.Length;
       }
-      catch (Exception e)
+      if (size > 0)
       {
-        Console.WriteLine(e.Message);
+        try
+        {
+          //Console.WriteLine("Dannie vigruzheni");
+          string json = "";
+          using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
+          {
+            json = sr.ReadToEnd();
+          }
+          Program.Sessions = JsonConvert.DeserializeObject<SessionsClass>(json);
+          for (int i = 0; i < list_tokens.Count; i++)
+          {
+            list_tokens[i].token = 0;
+          }
+        }
+        catch (Exception e)
+        {
+          Console.WriteLine(e.Message);
+        }
+        // Console.WriteLine($"Загружено записей: {this.list_tokens.Count}");
       }
 
-      Console.WriteLine($"Загружено записей: {this.list_tokens.Count}");
     }
   }
 

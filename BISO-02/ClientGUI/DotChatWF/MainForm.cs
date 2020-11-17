@@ -21,7 +21,8 @@ namespace DotChatWF
         int lastMsgID = 0;
         AuthentificationForm AuthForm;
         RegistartionForm RegForm;
-        int Token;
+        public TextBox TextBox_username;
+        public int int_token;
 
 
         public MainForm()
@@ -39,7 +40,7 @@ namespace DotChatWF
         }
 
         private void btnSend_Click(object sender, EventArgs e) {
-            if (Token == 0)
+            if (int_token == 0)
       {
         MessageBox.Show("Please log in or register");
       }
@@ -64,7 +65,6 @@ namespace DotChatWF
             StreamWriter reqStream = new StreamWriter(req.GetRequestStream());
             reqStream.Write(postData);
             reqStream.Close();
-
             req.GetResponse();
         }
 
@@ -92,9 +92,10 @@ namespace DotChatWF
 
     private void MainForm_Load(object sender, EventArgs e)
     {
-      Token = 0;
+      int_token = 0;
       AuthForm = new AuthentificationForm();
       RegForm = new RegistartionForm();
+      TextBox_username = fieldUsername;
 
     }
 

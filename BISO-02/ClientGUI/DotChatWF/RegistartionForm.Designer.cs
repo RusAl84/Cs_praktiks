@@ -111,6 +111,8 @@
       this.Controls.Add(this.btnReg2serv);
       this.Name = "RegistartionForm";
       this.Text = "RegistartionForm";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistartionForm_FormClosing);
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistartionForm_FormClosed);
       this.Load += new System.EventHandler(this.RegistartionForm_Load);
       this.ResumeLayout(false);
       this.PerformLayout();
