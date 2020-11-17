@@ -21,6 +21,7 @@ namespace MathTaskClassLibraryTests
 
             // сравнение ожидаемого результата с полученным
             Assert.AreEqual(expected, actual);
+            
         }
     }
 }
