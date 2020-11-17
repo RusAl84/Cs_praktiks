@@ -67,13 +67,13 @@ namespace Server
     }
 
   }
-
-  public class tokens
+  
+  public class  tokens
   {
     public int token { get; set; }
     public string username { get; set; }
     public string password { get; set; }
-
+    
     public tokens()
     {
       this.token = -1;
@@ -95,7 +95,7 @@ namespace Server
   public class SessionsClass
   {
     public List<tokens> list_tokens = new List<tokens>();
-
+    
     public void add()
     {
       tokens token = new tokens(515, "Valera", "UWP");
@@ -131,7 +131,7 @@ namespace Server
         {
           json = sr.ReadToEnd();
         }
-        SessionsClass ses = JsonConvert.DeserializeObject<SessionsClass>(json);
+        SessionsClass ses  =  JsonConvert.DeserializeObject<SessionsClass>(json);
       }
       catch (Exception e)
       {
