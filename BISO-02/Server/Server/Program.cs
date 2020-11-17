@@ -19,9 +19,7 @@ namespace Server
         {
             ms = new MessagesClass();
             Sessions = new SessionsClass();
-            //Sessions.addValera();
-            //Sessions.SaveToFile();
-             //Console.WriteLine(Sessions.list_tokens[0].login);
+            Sessions.add();
             CreateHostBuilder(args).Build().Run();
         }
 
