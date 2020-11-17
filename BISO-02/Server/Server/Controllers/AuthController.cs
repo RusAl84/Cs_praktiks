@@ -28,12 +28,9 @@ namespace Server.Controllers
 
     // POST api/<AuthController>
     [HttpPost]
-    public int Post([FromBody] AuthData auth_data)
+    public void Post([FromBody] string value)
     {
-      return Program.Sessions.login(auth_data);
     }
-
-
 
   }
 }
