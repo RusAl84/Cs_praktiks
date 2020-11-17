@@ -59,18 +59,19 @@ namespace Server
         }
       protected void OnApplicationStarted()
       {
-
-      }
+      Program.Sessions.LoadFromFile();
+      Console.WriteLine("Конфигурация с данными паролей успешно загружена");
+    }
 
       protected void OnApplicationStopping()
       {
       Program.Sessions.SaveToFile();
-      }
+    }
 
       protected void OnApplicationStopped()
       {
-       
-      }
+      
+    }
 
   }
 }
