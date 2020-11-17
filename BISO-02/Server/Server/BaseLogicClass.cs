@@ -67,43 +67,92 @@ namespace Server
     }
 
   }
-  
-  public class  tokens
+
+  public class tokens
   {
     public int token { get; set; }
-    public string username { get; set; }
+    public string login { get; set; }
     public string password { get; set; }
-    
+
     public tokens()
     {
       this.token = -1;
-      this.username = "none";
+      this.login = "none";
       this.password = "none";
     }
 
-    public tokens(int token, string username, string password)
+    public tokens(int token, string login, string password)
     {
       this.token = token;
-      this.username = username;
+      this.login = login;
       this.password = password;
     }
 
   }
 
-
-
   public class SessionsClass
   {
     public List<tokens> list_tokens = new List<tokens>();
-    
-    public void add()
+
+    public void addValera()
     {
-      tokens token = new tokens(515, "Valera", "UWP");
-      list_tokens.Add(token);
+      Random rand = new Random();
+      int int_token = rand.Next(1000 * 1000, 10 * 1000 * 1000);
+      tokens token_record = new tokens(int_token, "Valera", "UWP");
+      token_record.login = "Valera";
+      token_record.password = "UWP";
+      token_record.token = int_token;
+      list_tokens.Add(token_record);
     }
+
+    public int login(AuthData auth_data)
+    {
+      string login = auth_data.login;
+      string password = auth_data.password;
+      bool login_exist = false;
+      foreach (tokens item in list_tokens)
+      {
+        if (item.login == login)
+        {
+          login_exist = true;
+          if (item.password == password)
+          {
+            Random rand = new Random();
+            int token = rand.Next(1000 * 1000, 10 * 1000 * 1000);
+            tokens record_token = new tokens(token, login, password);
+            list_tokens.Add(record_token);
+            Console.WriteLine($"аутификация успешно login: {login} password: {password} token: {token}");
+            return token;
+          }
+          else
+          {
+            return -1;
+          }
+        }
+      }
+      if (!login_exist)
+      {
+        return -2;
+      }
+      return -200;   // ошибка логики
+    }
+
+    public int registration(AuthData auth_data)
+    {
+      string login = auth_data.login;
+      string password = auth_data.password;
+      Random rand = new Random();
+      int token = rand.Next(1000 * 10, 10 * 1000 * 10);
+      tokens record_token = new tokens(token, login, password);
+      list_tokens.Add(record_token);
+      Console.WriteLine($"Регистрация успешно login: {login} password: {password} token: {token}");
+      return token;
+    }
+
 
     public void SaveToFile(string filename = "data_sessions.json")
     {
+      Console.WriteLine("Dannie vigruzheni");
       try
       {
         string Data = JsonConvert.SerializeObject(Program.Sessions);
@@ -125,19 +174,28 @@ namespace Server
     {
       try
       {
-        Console.WriteLine("Dannie vigruzheni");
+        //Console.WriteLine("Dannie vigruzheni");
         string json = "";
         using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
         {
           json = sr.ReadToEnd();
         }
-        SessionsClass ses  =  JsonConvert.DeserializeObject<SessionsClass>(json);
+        Program.Sessions = JsonConvert.DeserializeObject<SessionsClass>(json);
       }
       catch (Exception e)
       {
         Console.WriteLine(e.Message);
       }
+
+      Console.WriteLine($"Загружено записей: {this.list_tokens.Count}");
     }
   }
+
+  public class AuthData
+  {
+    public string login { get; set; }
+    public string password { get; set; }
+  }
+
 
 }
