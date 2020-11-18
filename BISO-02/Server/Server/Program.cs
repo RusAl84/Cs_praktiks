@@ -17,8 +17,8 @@ namespace Server
 
     public static void Main(string[] args)
         {
-            ms = new MessagesClass();
-            Sessions = new SessionsClass();
+            ms = new MessagesClass();  //обработка сообщений
+            Sessions = new SessionsClass(); // хранение токенов логинов и паролей
             //Sessions.addValera();
             Sessions.LoadFromFile();
            // Console.WriteLine(Sessions.list_tokens.Count);

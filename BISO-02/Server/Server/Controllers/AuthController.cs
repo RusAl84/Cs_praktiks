@@ -12,19 +12,6 @@ namespace Server.Controllers
   [ApiController]
   public class AuthController : ControllerBase
   {
-    //// GET: api/<AuthController>
-    //[HttpGet]
-    //public IEnumerable<string> Get()
-    //{
-    //  return new string[] { "value1", "value2" };
-    //}
-
-    //// GET api/<AuthController>/5
-    //[HttpGet("{id}")]
-    //public string Get(int id)
-    //{
-    //  return "value";
-    //}
 
     // POST api/<AuthController>
     [HttpPost]

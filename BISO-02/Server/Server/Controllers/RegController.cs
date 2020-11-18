@@ -12,20 +12,6 @@ namespace Server.Controllers
   [ApiController]
   public class RegController : ControllerBase
   {
-    //// GET: api/<RegController>
-    //[HttpGet]
-    //public IEnumerable<string> Get()
-    //{
-    //  return new string[] { "value1", "value2" };
-    //}
-
-    //// GET api/<RegController>/5
-    //[HttpGet("{id}")]
-    //public string Get(int id)
-    //{
-    //  return "value";
-    //}
-
     // POST api/<RegController>
     [HttpPost]
     public int Post([FromBody] AuthData auth_data)
@@ -34,17 +20,5 @@ namespace Server.Controllers
       Console.WriteLine(int_token);
       return int_token;
     }
-
-    //// PUT api/<RegController>/5
-    //[HttpPut("{id}")]
-    //public void Put(int id, [FromBody] string value)
-    //{
-    //}
-
-    //// DELETE api/<RegController>/5
-    //[HttpDelete("{id}")]
-    //public void Delete(int id)
-    //{
-    //}
   }
 }

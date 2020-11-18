@@ -116,6 +116,7 @@ namespace Server
       string login = auth_data.login;
       string password = auth_data.password;
       bool login_exist = false;
+      int row_num = 0;
       foreach (tokens item in list_tokens)
       {
         if (item.login == login)
@@ -123,11 +124,11 @@ namespace Server
           login_exist = true;
           if (item.password == password)
           {
-
             int token = GenToken();
             tokens record_token = new tokens(token, login, password);
-            list_tokens.Add(record_token);
-            Console.WriteLine($"аутификация успешно login: {login} password: {password} token: {token}");
+            list_tokens[row_num].token = token;
+            //list_tokens.Add(record_token);
+            Console.WriteLine($"Аутификация успешно login: {login} password: {password} token: {token}");
             return token;
           }
           else
@@ -135,6 +136,7 @@ namespace Server
             return -1;
           }
         }
+        row_num++;
       }
       if (!login_exist)
       {

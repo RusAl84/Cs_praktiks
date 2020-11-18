@@ -36,18 +36,15 @@ namespace DotChatWF
     {
         string pass1 = TBPass1.Text;
         string pass2 = TBPass2.Text;
-        if (pass1 == pass2)
+      if (pass1 == pass2)
       {
-
         WebRequest req = WebRequest.Create("http://localhost:5000/api/reg");
         req.Method = "POST";
         AuthData auth_data = new AuthData();
         auth_data.login = fieldUserName.Text;
         auth_data.password = pass1;
         string postData = JsonConvert.SerializeObject(auth_data);
-        //byte[] bytes = Encoding.UTF8.GetBytes(postData);
         req.ContentType = "application/json";
-        //req.ContentLength = bytes.Length;
         StreamWriter reqStream = new StreamWriter(req.GetRequestStream());
         reqStream.Write(postData);
         reqStream.Close();
