@@ -23,6 +23,8 @@ namespace DotChatWF
         RegistartionForm RegForm;
         public TextBox TextBox_username;
         public int int_token;
+        public Message messages;
+
 
 
         public MainForm()
@@ -104,6 +106,16 @@ namespace DotChatWF
       RegForm.mForm = this;
       RegForm.Show();
       this.Visible = false;
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      Message msg = GetMessage(lastMsgID);
+      if (msg != null)
+      {
+        listMessages.Items.Add($"[{msg.username}] {msg.text}");
+        lastMsgID++;
+      }
     }
   }
   [Serializable]

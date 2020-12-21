@@ -38,6 +38,7 @@
       this.updateLoop = new System.Windows.Forms.Timer(this.components);
       this.btnAuth = new System.Windows.Forms.Button();
       this.btnReg = new System.Windows.Forms.Button();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.SuspendLayout();
       // 
       // listMessages
@@ -121,6 +122,12 @@
       this.btnReg.UseVisualStyleBackColor = true;
       this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
       // 
+      // timer1
+      // 
+      this.timer1.Enabled = true;
+      this.timer1.Interval = 500;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -154,6 +161,7 @@
         private System.Windows.Forms.Timer updateLoop;
     private System.Windows.Forms.Button btnAuth;
     private System.Windows.Forms.Button btnReg;
+    private System.Windows.Forms.Timer timer1;
   }
 }
 
