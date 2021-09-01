@@ -14,7 +14,7 @@ namespace pr2_01_02
     {
       // C#
       FileSystemWatcher watcher =
-      new FileSystemWatcher(@"D:\Documents");
+      new FileSystemWatcher(@"D:\temp");
 
       // C#
       watcher.Filter = "*.*";

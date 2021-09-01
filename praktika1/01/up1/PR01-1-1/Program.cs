@@ -2,14 +2,12 @@
 
 namespace PR1_1
 {
-    class Person
+    struct Person
     {
         public string firstName;
         public string lastName;
         static public string sekret;
         public int age;
-
-
         public Person(string _firstName, string _lastName, int _age, string _sekret)
         {
             firstName = _firstName;
@@ -37,8 +35,8 @@ namespace PR1_1
         static void Main(string[] args)
         {
             Person p = new Person("Rusakov", "Alexey", 35,"sekret_fvv");
-            Person p1 = new Person("Rusakov", "Alexey");
-            Person p2 = new Person("Rusakov", "Alexey", 35, "MAKSIK");
+            Person p1 = new Person("Rusakov", "Alexey", 35, "sekret_Mersova");
+            Person p2 = new Person("Rusakov", "Alexey", 35, "Ilusha");
             Console.WriteLine(p);
             Console.WriteLine(p1);
             Console.WriteLine(p2);

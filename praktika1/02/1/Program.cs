@@ -23,6 +23,7 @@ namespace _1
           type = "Reference Type";
         Console.WriteLine("{0}: {1}", o.GetType(), type);
       }
+      Console.ReadKey();
     }
   }
 }
