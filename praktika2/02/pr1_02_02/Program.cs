@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace pr1_02_02
 {
@@ -6,7 +7,11 @@ namespace pr1_02_02
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      StreamReader reader = File.OpenText(@"d:\temp\2.txt");
+      string contents = reader.ReadToEnd();
+      reader.Close();
+      Console.WriteLine(contents);
+
     }
   }
 }

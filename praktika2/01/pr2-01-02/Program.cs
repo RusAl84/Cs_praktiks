@@ -14,8 +14,6 @@ namespace pr2_01_02
     {
       // C#
       FileSystemWatcher watcher = new FileSystemWatcher(@"D:\temp");
-
-      // C#
       watcher.Filter = "*.*";
       watcher.IncludeSubdirectories = true;
       watcher.NotifyFilter = NotifyFilters.Attributes | NotifyFilters.Size;
