@@ -22,7 +22,7 @@ namespace Compression
             {
               compStream.WriteByte((byte)theByte);
               theByte = sourceFile.ReadByte();
-            }
+            } 
             compStream.Close();
 
 

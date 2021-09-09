@@ -10,7 +10,7 @@ namespace pr2_01_01
       // Показать все файлы
       foreach (FileInfo file in dir.GetFiles())
       {
-        Console.WriteLine($"File: {file.FullName}");
+        Console.WriteLine($"FILE: {file.FullName}");
       }
       // Показать все директории
       foreach (DirectoryInfo subDir in dir.GetDirectories())

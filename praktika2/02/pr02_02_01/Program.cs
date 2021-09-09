@@ -7,15 +7,20 @@ namespace pr02_02_01
   {
     static void spam()
     {
-
+      Random rnd = new Random();
+      int value = rnd.Next();
+      StreamWriter writer = File.CreateText(@"D:\temp\newfile" + value.ToString() + ".txt");
+      for (int i = 0; i < 100e6; i++)
+      {
+        writer.WriteLine("У Лёни выросла монобровь;)");
+      }
+      writer.Close();
     }
 
     static void Main(string[] args)
     {
-      StreamWriter writer = File.CreateText(@"D:\temp\newfile.txt");
-
-        writer.WriteLine(" монобровь;)");
-      writer.Close();
+      for (int i = 0; i < 10; i++)
+        spam();
 
     }
   }
