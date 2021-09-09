@@ -9,7 +9,11 @@ namespace pr1_02_02
     {
       StreamReader reader = File.OpenText(@"d:\temp\2.txt");
       string contents = reader.ReadToEnd();
+
       reader.Close();
+      contents = contents.Replace("Айрат", "Колян");
+      contents = contents.Replace("Колян", "Мирон");
+      contents = contents.ToUpper();
       Console.WriteLine(contents);
 
     }
