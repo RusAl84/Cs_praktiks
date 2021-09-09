@@ -10,9 +10,9 @@ namespace pr2_01_01
       // Показать все файлы
       foreach (FileInfo file in dir.GetFiles())
       {
-        Console.WriteLine("File: {0}", file.FullName);
+        Console.WriteLine($"File: {file.FullName}");
       }
-
+      // Показать все директории
       foreach (DirectoryInfo subDir in dir.GetDirectories())
       {
         ShowDirectory(subDir);
@@ -22,7 +22,8 @@ namespace pr2_01_01
     static void Main(string[] args)
     {
       // C#
-      DirectoryInfo dir = new DirectoryInfo(Environment.SystemDirectory); 
+      //DirectoryInfo dir = new DirectoryInfo(Environment.SystemDirectory); 
+      DirectoryInfo dir = new DirectoryInfo(@"d:\temp"); 
       ShowDirectory(dir);
     }
   }

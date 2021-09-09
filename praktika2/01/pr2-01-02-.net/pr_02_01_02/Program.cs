@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 
-namespace pr2_01_02
+namespace pr_02_01_02
 {
   class Program
-  {// C#
+  {
     static void watcher_Changed(object sender, FileSystemEventArgs e)
     {
       Console.WriteLine("Changed: {0}", e.FullPath);
@@ -14,8 +14,6 @@ namespace pr2_01_02
     {
       // C#
       FileSystemWatcher watcher = new FileSystemWatcher(@"D:\temp");
-
-      // C#
       watcher.Filter = "*.*";
       watcher.IncludeSubdirectories = true;
       watcher.NotifyFilter = NotifyFilters.Attributes | NotifyFilters.Size;
