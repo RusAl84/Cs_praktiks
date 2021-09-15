@@ -18,7 +18,7 @@ namespace Lesson1_Exercise1_CS
                               "47", 
                               "111-11-1111",
                               "8005555535",
-      "Володя Мужик;)"};
+                              "Илья Мужик;)"};
             foreach (string s in input)
             {
                 if (IsPhone(s)) Console.WriteLine(s + " is a phone number");
