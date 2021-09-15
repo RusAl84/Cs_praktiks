@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -21,17 +22,26 @@ namespace sendPOST
       {
         dataStream.Write(byteArray, 0, byteArray.Length);
       }
-
+      string strdata = "";
       WebResponse response = await request.GetResponseAsync();
       using (Stream stream = response.GetResponseStream())
       {
         using (StreamReader reader = new StreamReader(stream))
         {
-          Console.WriteLine(reader.ReadToEnd());
+          strdata = reader.ReadToEnd();
+          Console.WriteLine(strdata);
         }
       }
       response.Close();
 
+      Console.WriteLine(strdata);
+      object jsondata = JsonConvert.SerializeObject(strdata);
+      Console.WriteLine(jsondata);
+      //object synonyms = jsondata{"synonyms"};
+      ////foreach ( string item in )
+      //{
+
+      //}
     }
   }
 }
