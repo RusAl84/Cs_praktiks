@@ -11,7 +11,7 @@ namespace ConsoleApp2
       this.name = "Iliya";
       this.age = 19;
     }
-    public string name { get; set; }
+    public string name { get ; set; }
     public int age { get; set; }
 
     public override string ToString()
@@ -22,14 +22,23 @@ namespace ConsoleApp2
   }
   class megaEzhik : Ezhik
   {
-    public megaEzhik() => this.weapon="Кусь кусь;)";
+   static public int health;
+    public megaEzhik() {
+      this.weapon = "Кусь кусь;)";
+      health = 100;}
     public override string ToString() =>
-     String.Format($"name Ezhika: {name}   Age: {age}  Weapon: {this.weapon}");
+     String.Format($"name Ezhika: {name}   Age: {age}  Weapon: {this.weapon} Health: {health}" );
     public void setWeapon(string str1)
     {
       this.weapon = str1;
+ 
     }
     public string weapon { set; get; }
+    public void damange()
+    {
+      health -= 10;
+    }
+
   }
 
   class Program
@@ -42,12 +51,16 @@ namespace ConsoleApp2
       //Ezhik ezh2 = new Ezhik();
       //string jsonString = "{ \"name\":\"ЕВГЕНИЙ\",\"age\":17}";
       //ezh2 = JsonConvert.DeserializeObject<Ezhik>(jsonString);
+
+      ezh1.age = 19;
       megaEzhik mEzh = new megaEzhik();
       //mEzh.setWeapon("ням ням;)");
-      Console.WriteLine(ezh1);
-      Console.WriteLine(mEzh);
       megaEzhik mEzh1 = new megaEzhik { name = "Rusakov", age=36, weapon = "тук тук;)" };
+      mEzh1.damange();
+      mEzh1.damange();
+      mEzh.damange();
       Console.WriteLine(mEzh1);
+      Console.WriteLine(mEzh);
 
 
     }
