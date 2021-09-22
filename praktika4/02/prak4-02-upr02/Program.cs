@@ -8,9 +8,7 @@ namespace prak4_02_upr02
     static void Main(string[] args)
     {
       Stack stack = new Stack();
-      stack.Push("ARTEM");
-      stack.Push(0.5);
-      stack.Push(2);
+      stack.Push("GOSHA");
       stack.Push("EZHIK UBUNTU");
       stack.Push("EZHIK RH");
       stack.Push("EZHIK FEDORA");

@@ -20,16 +20,19 @@ namespace dict_sample
       lookup["8"] = "Eight";
       lookup["9"] = "девять";
       lookup["+"] = "плюс";
+      lookup["-"] = "тире";
 
       string ourNumber = "+7926-377-2622";
+      string outString = "";
       foreach (char c in ourNumber)
       {
         string digit = c.ToString(); 
         if (lookup.ContainsKey(digit))
         {
-          Console.WriteLine(lookup[digit]);
+          outString += lookup[digit] + " ";
         }
       }
+      Console.WriteLine(outString);
 
     }
   }
