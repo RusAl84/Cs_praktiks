@@ -8,13 +8,13 @@ namespace prak4_02_upr02
     static void Main(string[] args)
     {
       Stack stack = new Stack();
-      stack.Push("EGOR1");
+      stack.Push("ARTEM");
       stack.Push(0.5);
       stack.Push(2);
-      stack.Push("EGOR4");
-      stack.Push("EGOR5");
-      stack.Push("MAXIM");
-      stack.Push("ANDREY");
+      stack.Push("EZHIK UBUNTU");
+      stack.Push("EZHIK RH");
+      stack.Push("EZHIK FEDORA");
+      stack.Push("EZHIK MINT");
             while (stack.Count > 0)
             {
                 object obj = stack.Pop();

@@ -9,10 +9,12 @@ namespace prak4_02_upr01
     {
       Queue queue = new Queue();
 
-      queue.Enqueue("EGOR");
-      queue.Enqueue("DIMA");
-      queue.Enqueue("NASTYA");
-      queue.Enqueue("NIKITA");
+      queue.Enqueue("ARTEM");
+      queue.Enqueue("EZHIKA");
+      queue.Enqueue("EZHIKA ARCH");
+      queue.Enqueue("EZHIKA MINT");
+      
+      queue.
 
       while (queue.Count > 0)
       {

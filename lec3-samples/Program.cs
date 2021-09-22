@@ -12,8 +12,6 @@ namespace lec3_samples
             int x = 100 * 1000;
             string text = "";
 
-
-
             for (int i = 1; i <= x; i++)
             {
                 text += "Привет мир!\nПока мир...";

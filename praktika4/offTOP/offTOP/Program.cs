@@ -10,19 +10,20 @@ namespace offTOP
       ArrayList objectList1 = new ArrayList() { 1, 2, "string", 'c', 2.0f };
       ArrayList objectList2 = new ArrayList() { 1, 2, "string", 'c', 2.0f };
       ArrayList objectList3 = new ArrayList() { 1, 2, "string", 'c', 2.0f };
-      int count = 20 * 1000 * 1000;
+      int count = 200 * 1000 * 1000;
       string tmptext="";
       for (int i = 0; i < 10000; i++)
       {
-        tmptext += $"ВАЗЕЛИН {i}      ВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИНВАЗЕЛИН";
+        //tmptext += $"/* Артем съел Ежыка  {i}  */";
+        tmptext +="Артем съел Ежыка";
 
       }
       for (int i = 0; i < count; i++)
       {
-        objectList1.Add(tmptext);
-        objectList2.Add(tmptext);
-        objectList3.Add(tmptext);
-        //GC.Collect();
+        objectList1.Add(tmptext); GC.Collect();
+        objectList2.Add(tmptext); GC.Collect();
+        objectList3.Add(tmptext); GC.Collect();
+        //
       }
       //GC.Collect();
       Console.Beep();
