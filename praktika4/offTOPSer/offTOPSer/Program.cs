@@ -4,16 +4,16 @@ using System;
 namespace offTOPSer
 {
   [Serializable]
-  class Cipa
+  class Ezhik
   {
-    public Cipa(string name, byte age)
+    public Ezhik(string name, byte age)
     {
       this.name = name;
       this.age = age;
     }    
-    public Cipa()
+    public Ezhik()
     {
-      this.name = "Артём";
+      this.name = "Ярослав";
       this.age = 19;
     }
 
@@ -35,12 +35,12 @@ namespace offTOPSer
 
     static void Main(string[] args)
     {
-      Cipa cip1 = new Cipa();
+      Ezhik cip1 = new Ezhik();
       string json = JsonConvert.SerializeObject(cip1);
       Console.WriteLine(json);
       string jsonstring = "{ \"name\":\"Саша\",\"age\":17}";
-      Cipa cip2 = new Cipa();
-      cip2 = JsonConvert.DeserializeObject<Cipa>(jsonstring);
+      Ezhik cip2 = new Ezhik();
+      cip2 = JsonConvert.DeserializeObject<Ezhik>(jsonstring);
       Console.WriteLine(cip2);
     }
   }

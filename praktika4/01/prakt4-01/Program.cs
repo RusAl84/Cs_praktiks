@@ -12,18 +12,19 @@ namespace prakt4_01
         myList.Add("EZHIK");
         myList.Add("MAKSIM");
         myList.Add("HENESSY");
-      myList.Add("Misha");
-      foreach (string item in myList)
+        myList.Add("Misha");
+        
+      foreach (object item in myList)
         {
           Console.WriteLine("Unsorted: {0}", item.ToString());
         }
-      // Сортировка при помощи стандартного объекта сравнения 
-      myList.Sort();
-      //myList.Reverse();
-      foreach (string item in myList)
-      {
-        Console.WriteLine("   Sorted: {0}", item);
-      }
+      //// Сортировка при помощи стандартного объекта сравнения 
+      //myList.Sort();
+      ////myList.Reverse();
+      //foreach (string item in myList)
+      //{
+      //  Console.WriteLine("   Sorted: {0}", item);
+      //}
 
     }
 

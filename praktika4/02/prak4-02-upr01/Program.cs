@@ -10,7 +10,7 @@ namespace prak4_02_upr01
       Queue queue = new Queue();
 
       queue.Enqueue("GOSHA");
-      queue.Enqueue("EZHIKA");
+      queue.Enqueue("EZHIK");
       queue.Enqueue("EZHIKA ARCH");
       queue.Enqueue("EZHIKA MINT");
       
