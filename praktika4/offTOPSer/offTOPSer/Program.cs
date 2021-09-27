@@ -13,7 +13,7 @@ namespace offTOPSer
     }    
     public Ezhik()
     {
-      this.name = "Ярослав";
+      this.name = "Атем";
       this.age = 19;
     }
 
@@ -26,19 +26,14 @@ namespace offTOPSer
       return string.Format($"name: {name}     age: {age}");
     }
   }
-
-
   class Program
   {
-
-
-
     static void Main(string[] args)
     {
       Ezhik cip1 = new Ezhik();
       string json = JsonConvert.SerializeObject(cip1);
       Console.WriteLine(json);
-      string jsonstring = "{ \"name\":\"Саша\",\"age\":17}";
+      string jsonstring = "{ \"name\":\"Вадим\",\"age\":13}";
       Ezhik cip2 = new Ezhik();
       cip2 = JsonConvert.DeserializeObject<Ezhik>(jsonstring);
       Console.WriteLine(cip2);

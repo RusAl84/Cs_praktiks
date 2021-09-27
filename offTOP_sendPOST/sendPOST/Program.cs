@@ -13,7 +13,7 @@ namespace sendPOST
     {
       WebRequest request = WebRequest.Create("https://synonymonline.ru/assets/json/synonyms.json");
       request.Method = "POST";
-      string sName = "word=Ленин";
+      string sName = "word=ЕЖИК";
       byte[] byteArray = Encoding.UTF8.GetBytes(sName);
       request.ContentType = "application/x-www-form-urlencoded";
       request.ContentLength = byteArray.Length;

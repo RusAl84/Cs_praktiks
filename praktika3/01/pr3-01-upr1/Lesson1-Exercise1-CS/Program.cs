@@ -18,7 +18,7 @@ namespace Lesson1_Exercise1_CS
                               "47", 
                               "111-11-1111",
                               "8005555535",
-                              "Денис;)"};
+                              "Костя съел ЕЖА;)"};
             foreach (string s in input)
             {
                 if (IsPhone(s)) Console.WriteLine(s + " is a phone number");
@@ -28,10 +28,7 @@ namespace Lesson1_Exercise1_CS
             }
       Console.ReadLine();
         }
-    static bool IsPhone(string s)
-    {
-      return Regex.IsMatch(s, @"^\(?\d{3}\)?[\s\-]?\d{3}\-?\d{4}$");
-    }
+    static bool IsPhone(string s) => Regex.IsMatch(s, @"^\(?\d{3}\)?[\s\-]?\d{3}\-?\d{4}$");
     static bool IsZip(string s) => Regex.IsMatch(s, @"^\d{5}(\-\d{4})?$");
     }
 }

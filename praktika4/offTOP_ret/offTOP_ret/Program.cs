@@ -27,7 +27,7 @@ namespace offTOP_ret
       Ret ret1 = new Ret();
       string json = JsonConvert.SerializeObject(ret1);
       Console.WriteLine(json);
-      string jsonstring = "{\"name\":\"Gosha MUZHIK\",\"age\":19}";
+      string jsonstring = "{\"name\":\"Георгий MUZHIK\",\"age\":19}";
       Ret ret2 = new Ret();
       ret2 = JsonConvert.DeserializeObject<Ret>(jsonstring);
       Console.WriteLine(jsonstring);

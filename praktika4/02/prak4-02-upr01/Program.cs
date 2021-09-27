@@ -9,8 +9,8 @@ namespace prak4_02_upr01
     {
       Queue queue = new Queue();
 
-      queue.Enqueue("GOSHA");
-      queue.Enqueue("EZHIK");
+      queue.Enqueue("ВАНЯ");
+      queue.Enqueue("EZHIK UBUNTU");
       queue.Enqueue("EZHIKA ARCH");
       queue.Enqueue("EZHIKA MINT");
       
@@ -19,6 +19,7 @@ namespace prak4_02_upr01
       while (queue.Count > 0)
       {
         object obj = queue.Dequeue();
+        
         Console.WriteLine("From Queue: {0}", obj);
       }
     }

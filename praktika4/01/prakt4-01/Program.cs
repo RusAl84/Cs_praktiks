@@ -8,23 +8,25 @@ namespace prakt4_01
 
       static void Main(string[] args)
       {
-        ArrayList myList = new ArrayList() { "GOSHA"};
-        myList.Add("EZHIK");
-        myList.Add("MAKSIM");
+        ArrayList myList = new ArrayList() { "НИКИТА"};
+        myList.Add("выпил");
+        myList.Add("ВАНЮ и ");
+      //myList.Add(0.5);
         myList.Add("HENESSY");
-        myList.Add("Misha");
+  
         
       foreach (object item in myList)
         {
-          Console.WriteLine("Unsorted: {0}", item.ToString());
+          Console.WriteLine(String.Format("Unsorted: {item.ToString()}") );
         }
-      //// Сортировка при помощи стандартного объекта сравнения 
-      //myList.Sort();
-      ////myList.Reverse();
-      //foreach (string item in myList)
-      //{
-      //  Console.WriteLine("   Sorted: {0}", item);
-      //}
+      //Сортировка при помощи стандартного объекта сравнения
+      myList.Sort();
+
+      //myList.Reverse();
+      foreach (string item in myList)
+      {
+        Console.WriteLine("   Sorted: {0}", item);
+      }
 
     }
 

@@ -8,12 +8,11 @@ namespace ConsoleApp2
   {
     public Ezhik()
     {
-      this.name = "Iliya";
+      this.name = "Артем";
       this.age = 19;
     }
     public string name { get ; set; }
     public int age { get; set; }
-
     public override string ToString()
     {
       //return base.ToString();
@@ -22,23 +21,23 @@ namespace ConsoleApp2
   }
   class megaEzhik : Ezhik
   {
-   static public int health;
+    static public int health;
     public megaEzhik() {
       this.weapon = "Кусь кусь;)";
-      health = 100;}
+      health = 100; }
     public override string ToString() =>
-     String.Format($"name Ezhika: {name}   Age: {age}  Weapon: {this.weapon} Health: {health}" );
+     String.Format($"name Ezhika: {name}   Age: {age}  Weapon: {this.weapon} Health: {health}");
     public void setWeapon(string str1)
     {
       this.weapon = str1;
- 
     }
     public string weapon { set; get; }
-    public void damange()
+    public int damange()
     {
-      health -= 10;
+      int dmg = 10; 
+      health -= dmg;
+      return dmg;
     }
-
   }
 
   class Program
@@ -46,21 +45,23 @@ namespace ConsoleApp2
     static void Main(string[] args)
     {
       Ezhik ezh1 = new Ezhik();
-      //string json = JsonConvert.SerializeObject(ezh1);
-      //Console.WriteLine(json);
-      //Ezhik ezh2 = new Ezhik();
-      //string jsonString = "{ \"name\":\"ЕВГЕНИЙ\",\"age\":17}";
-      //ezh2 = JsonConvert.DeserializeObject<Ezhik>(jsonString);
+      string json = JsonConvert.SerializeObject(ezh1);
+      Console.WriteLine(json);
+      Ezhik ezh2 = new Ezhik();
+      string jsonString = "{ \"name\":\"Русаков\",\"age\":36}";
+      ezh2 = JsonConvert.DeserializeObject<Ezhik>(jsonString);
+      Console.WriteLine(ezh2);
+
 
       ezh1.age = 19;
-      megaEzhik mEzh = new megaEzhik();
+      megaEzhik mEzh1 = new megaEzhik();
       //mEzh.setWeapon("ням ням;)");
-      megaEzhik mEzh1 = new megaEzhik { name = "Rusakov", age=36, weapon = "тук тук;)" };
+      megaEzhik mEzh2 = new megaEzhik { name = "Rusakov", age = 36, weapon = "тук тук;)" };
       mEzh1.damange();
       mEzh1.damange();
-      mEzh.damange();
+      mEzh2.damange();
       Console.WriteLine(mEzh1);
-      Console.WriteLine(mEzh);
+      Console.WriteLine(mEzh2);
 
 
     }
