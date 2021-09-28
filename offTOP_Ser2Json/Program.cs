@@ -6,11 +6,11 @@ namespace ConsoleApp2
   [Serializable]
   class Ezhik
   {
-    public Ezhik()
-    {
-      this.name = "Артем";
-      this.age = 19;
-    }
+    //public Ezhik()
+    //{
+    //  this.name = "Дима";
+    //  this.age = 20;
+    //}
     public string name { get ; set; }
     public int age { get; set; }
     public override string ToString()
@@ -21,7 +21,7 @@ namespace ConsoleApp2
   }
   class megaEzhik : Ezhik
   {
-    static public int health;
+    public int health;
     public megaEzhik() {
       this.weapon = "Кусь кусь;)";
       health = 100; }
@@ -55,7 +55,7 @@ namespace ConsoleApp2
 
       ezh1.age = 19;
       megaEzhik mEzh1 = new megaEzhik();
-      //mEzh.setWeapon("ням ням;)");
+      mEzh1.setWeapon("ням ням;)");
       megaEzhik mEzh2 = new megaEzhik { name = "Rusakov", age = 36, weapon = "тук тук;)" };
       mEzh1.damange();
       mEzh1.damange();
