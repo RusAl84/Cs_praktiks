@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0464E16E-A2ED-4717-867F-0B8E2177E6C4}"
 	ProjectSection(SolutionItems) = preProject
 		ClassEzh.cs = ClassEzh.cs
+		ClassMaxim.cs = ClassMaxim.cs
 	EndProjectSection
 EndProject
 Global
