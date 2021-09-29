@@ -2,20 +2,12 @@
 
 namespace EzhSampleSer
 {
-  class Ezh
-  {
-    public string name="Артем";
 
-    public override string ToString()
-    {
-      return this.name;
-    }
-  }
   class Program
   {
     static void Main(string[] args)
     {
-      Ezh ezh1 = new Ezh();
+      Ezh ezh1 = new Ezh { Name="Артем" };
 
       Console.WriteLine(ezh1);
     }
