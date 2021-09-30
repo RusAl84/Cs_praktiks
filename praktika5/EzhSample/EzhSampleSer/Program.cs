@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization.Formatters.Soap;
+//using System.Runtime.Serialization.Formatters.Soap;
 using System.Xml.Serialization;
 
 namespace EzhSampleSer
