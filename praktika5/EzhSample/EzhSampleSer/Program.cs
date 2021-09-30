@@ -2,11 +2,11 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap;
 using System.Xml.Serialization;
 
 namespace EzhSampleSer
 {
-
   class Program
   {
     static void BinarySer(Ezh ezh1)
@@ -33,10 +33,26 @@ namespace EzhSampleSer
     {
       string jsonString = JsonConvert.SerializeObject(ezh1);
       Console.WriteLine(jsonString);
-      //Ezh restoredPerson = JsonSerializer.Deserialize<Ezh>(json);
-      Ezh restoredEzh = JsonConvert.DeserializeObject<Ezh>(jsonString);
+      try
+      {
+        using (StreamWriter sw = new StreamWriter("Ehz_JSON.txt", false, System.Text.Encoding.Default))
+        {
+          sw.WriteLine(jsonString);
+        }
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+      }
+      string restoredJsonString = "";
+      using (StreamReader sr = new StreamReader("Ehz_JSON.txt"))
+      {
+        restoredJsonString = sr.ReadToEnd();
+      }
+      Ezh restoredEzh = JsonConvert.DeserializeObject<Ezh>(restoredJsonString);
       Console.WriteLine(restoredEzh);
     }
+
     static void XMLSer(Ezh ezh1)
     {
       // передаем в конструктор тип класса
@@ -54,21 +70,41 @@ namespace EzhSampleSer
         Console.WriteLine("Объект десериализован");
         Console.WriteLine(newEzh);
       }
+    }
 
+    static void SOAPSer(Ezh ezh1)
+    {
+       //// создаем объект SoapFormatter
+       //     SoapFormatter formatter = new SoapFormatter();
+       //     // получаем поток, куда будем записывать сериализованный объект
+       //     using (FileStream fs = new FileStream("Ehz_", FileMode.OpenOrCreate))
+       //     {
+       //         formatter.Serialize(fs, people);
+       //         Console.WriteLine("Объект сериализован");
+       //     }
+ 
+       //     // десериализация
+       //     using (FileStream fs = new FileStream("people.soap", FileMode.OpenOrCreate))
+       //     {
+       //         Person[] newPeople = (Person[])formatter.Deserialize(fs);
+ 
+       //         Console.WriteLine("Объект десериализован");
+       //         foreach (Person p in newPeople)
+       //         {
+       //             Console.WriteLine("Имя: {0} --- Возраст: {1}", p.Name, p.Age);
+       //         }
+       //     }
     }
 
     static void Main(string[] args)
     {
       Ezh ezh1 = new Ezh (){ Name = "Максим", Age = 11 };
       Console.WriteLine(ezh1);
-      BinarySer(ezh1); // Бинарная сериализация
+      BinarySer(ezh1);   // Бинарная сериализация
       JsonSer(ref ezh1); //Сериализация в JSON
-      XMLSer(ezh1);
+      XMLSer(ezh1);      //Сериализация в XML
+      // SOAP формат убрали MS
       Console.ReadLine();
-
-
-
-
 
     }
   }
