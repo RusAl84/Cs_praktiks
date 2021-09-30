@@ -12,6 +12,7 @@ namespace EzhSampleSer
     static void BinarySer(Ezh ezh1)
     {
       // создаем объект BinaryFormatter
+
       BinaryFormatter formatter = new BinaryFormatter();
       // получаем поток, куда будем записывать сериализованный объект
       using (FileStream fs = new FileStream("Ehz_b.txt", FileMode.OpenOrCreate))
