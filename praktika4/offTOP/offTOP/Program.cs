@@ -14,7 +14,7 @@ namespace offTOP
       string tmptext="";
       for (int i = 0; i < 10000; i++)
       {
-        tmptext += $"/* Ёжик съел Евгена  {i} раза */";
+        tmptext += $"/* Ёжик съел Вовчика  {i} раза */";
         //tmptext +="ГОША съел ЕжИка";
 
       }
