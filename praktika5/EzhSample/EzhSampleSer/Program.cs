@@ -97,7 +97,7 @@ namespace EzhSampleSer
 
     static void Main(string[] args)
     {
-      Ezh ezh1 = new Ezh (){ Name = "Никита", Age = 40 };
+      Ezh ezh1 = new Ezh (){ Name = "Вован", Age = 40 };
       Console.WriteLine(ezh1);
       BinarySer(ezh1);   // Бинарная сериализация
       JsonSer(ref ezh1); //Сериализация в JSON
