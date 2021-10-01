@@ -28,6 +28,6 @@ public class Ezh
   public override string ToString()
   {
     return String.Format($"Ёжика зовут: {this.name} \n" +
-                        $"Ёжику {this.age} лет");
+                         $"Ёжику {this.age} лет");
   }
 }

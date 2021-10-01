@@ -12,7 +12,6 @@ namespace EzhSampleSer
     static void BinarySer(Ezh ezh1)
     {
       // создаем объект BinaryFormatter
-
       BinaryFormatter formatter = new BinaryFormatter();
       // получаем поток, куда будем записывать сериализованный объект
       using (FileStream fs = new FileStream("Ehz_b.txt", FileMode.OpenOrCreate))
@@ -98,7 +97,7 @@ namespace EzhSampleSer
 
     static void Main(string[] args)
     {
-      Ezh ezh1 = new Ezh (){ Name = "Максим", Age = 11 };
+      Ezh ezh1 = new Ezh (){ Name = "Никита", Age = 40 };
       Console.WriteLine(ezh1);
       BinarySer(ezh1);   // Бинарная сериализация
       JsonSer(ref ezh1); //Сериализация в JSON
