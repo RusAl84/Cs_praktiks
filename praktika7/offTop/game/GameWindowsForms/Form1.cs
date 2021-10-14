@@ -59,7 +59,7 @@ namespace GameWindowsForms
         public Form1()
         {
             InitializeComponent();
-            gameTimer.Interval = 1000 / 30;
+            gameTimer.Interval = 1000 / 30;   // 30FPS
             gameTimer.Start();
 
             // Инициализация объектов
@@ -161,7 +161,7 @@ namespace GameWindowsForms
             // Обработка логики выстрела
             if (keySpace)
             {
-                var speed = 5f;                
+                var speed = 7f;                
                 shots.Add(new Shot(player.pos, new PointF(direction.X * speed, direction.Y * speed)));                
             }
 
@@ -192,7 +192,7 @@ namespace GameWindowsForms
 
             // Отрисовка отладочной информации
             g.DrawString(
-                Convert.ToString(player.pos), 
+                Convert.ToString(player.pos) + " " + shots.Count, 
                 mainFont, 
                 brushBlack, 
                 0, 
