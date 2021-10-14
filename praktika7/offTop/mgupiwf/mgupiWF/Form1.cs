@@ -20,7 +20,7 @@ namespace mgupiWF
     public static int Height = 600;
     public static Rectangle rect = new Rectangle(1, 1, Width - 2, Height - 2);
     public Pen _pen = new Pen(Color.Black, 5);
-    public Brush _brush = Brushes.Green;
+    public Brush _brush = Brushes.Linen;
     public Graphics g;
     public Bitmap bm = new Bitmap(Width, Height);
 
@@ -42,8 +42,6 @@ namespace mgupiWF
     public void draw()
     {
       g.Clear(Color.White);
-      //drawEl(300 - 50 / 2, 300 - 50 / 2, 50, 50);
-      //drawEl(180, 275, 100, 50);
       _brush = Brushes.AntiqueWhite;
       drawRect(50, 190, 500, 380);
       _brush = Brushes.SaddleBrown;
