@@ -12,6 +12,8 @@ namespace prakt4_01
         myList.Add("выпил");
         myList.Add("ВАНЮ и ");
       //myList.Add(0.5);
+
+
         myList.Add("HENESSY");
   
         
