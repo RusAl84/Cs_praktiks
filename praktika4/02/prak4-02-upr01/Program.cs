@@ -9,7 +9,7 @@ namespace prak4_02_upr01
     {
       Queue queue = new Queue();
 
-      queue.Enqueue("ВАНЯ");
+      queue.Enqueue("Данила");
       queue.Enqueue("EZHIK UBUNTU");
       queue.Enqueue("EZHIKA ARCH");
       queue.Enqueue("EZHIKA MINT");
