@@ -7,7 +7,6 @@ namespace SimpleThreadingDemo
     {
 
         static void Counting() {
-
             Random rand = new Random();
             for (int i=0;i<100; i++)
             {
