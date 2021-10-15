@@ -46,6 +46,9 @@ namespace mgupiWF
       drawRect(50, 190, 500, 380);
       _brush = Brushes.SaddleBrown;
       drawRect(30, 150, 540, 40);
+      drawRect(90, 240, 120, 180);
+      drawRect(250, 240, 120, 180);
+      drawRect(410, 240, 120, 180);
       //g.DrawString("МГУПИ",this.Font, Brushes.Black, 0, 0);
       var fontFamily = new FontFamily("Times New Roman");
       var font = new Font(fontFamily, 32, FontStyle.Regular, GraphicsUnit.Pixel);
