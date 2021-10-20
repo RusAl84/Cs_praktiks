@@ -56,15 +56,14 @@ namespace ClientWF
         //MessageBox.Show($"Успех: {res.Content}");
         jsonString = res.Content;
         if (jsonString != "\"Not found\"") {
-
             jsonString = jsonString.Replace("\\", "");
             MessageClass mes = new MessageClass();
-           mes = JsonConvert.DeserializeObject<MessageClass>(jsonString);
-
-        listBox1.Items.Add(mes);
-
-        //listBox1.Items.Add(jsonString);
-          pos++;
+            string str1 = "";
+            for (int i = 1; i < jsonString.Length-1; i++)
+              str1 += jsonString[i];
+            mes = JsonConvert.DeserializeObject<MessageClass>(str1);
+            listBox1.Items.Add(mes);
+            pos++;
         }
       }
         //else
@@ -79,7 +78,6 @@ namespace ClientWF
         //  }
         //}
         //MessageBox.Show(queryResult);
-
       }
     }
 
