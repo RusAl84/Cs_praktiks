@@ -31,7 +31,6 @@ namespace ClientWF
       var request = new RestRequest("/api/SendMessage", Method.POST);
       request.AddJsonBody(JsonConvert.SerializeObject(mes));
       var res = client.Execute(request);
-      
       //if (response.StatusCode == System.Net.HttpStatusCode.Created)
       //{
       //  string str1 = "";
