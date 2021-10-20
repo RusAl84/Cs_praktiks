@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessangerLibrary", "..\..\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "..\..\TestConsole\TestConsole\TestConsole.csproj", "{19AFF1F7-5AF5-47FC-B7B8-80A0F39C0FE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWF", "..\..\ClientWF\ClientWF\ClientWF.csproj", "{A7EA888B-F2CC-4FC2-9481-B74D2F96DB11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{19AFF1F7-5AF5-47FC-B7B8-80A0F39C0FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19AFF1F7-5AF5-47FC-B7B8-80A0F39C0FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19AFF1F7-5AF5-47FC-B7B8-80A0F39C0FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7EA888B-F2CC-4FC2-9481-B74D2F96DB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EA888B-F2CC-4FC2-9481-B74D2F96DB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EA888B-F2CC-4FC2-9481-B74D2F96DB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EA888B-F2CC-4FC2-9481-B74D2F96DB11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace ServerASPCORE
   {
     public Startup(IConfiguration configuration)
     {
+
       Configuration = configuration;
     }
 
@@ -34,7 +36,7 @@ namespace ServerASPCORE
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Microsoft.AspNetCore.Hosting.IApplicationLifetime applicationLifetime)
     {
       if (env.IsDevelopment())
       {
@@ -45,6 +47,10 @@ namespace ServerASPCORE
 
       app.UseRouting();
 
+
+      applicationLifetime.ApplicationStopping.Register(OnApplicationStopping);
+      applicationLifetime.ApplicationStopped.Register(OnApplicationStopped);
+
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>
@@ -52,5 +58,16 @@ namespace ServerASPCORE
         endpoints.MapControllers();
       });
     }
+    protected void OnApplicationStopping()
+    {
+      Program.listOfMessages.SaveToFile(Program.FileName);
+    }
+    protected void OnApplicationStopped()
+    {
+      Program.listOfMessages.SaveToFile(Program.FileName);
+    }
+
   }
+
+
 }

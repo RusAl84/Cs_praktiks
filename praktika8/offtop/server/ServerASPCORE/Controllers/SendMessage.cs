@@ -10,35 +10,37 @@ namespace ServerASPCORE.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class ValuesGet : ControllerBase
+  public class SendMessage : ControllerBase
   {
-    // GET: api/<ValuesGet>
+    //// GET: api/<SendMessage>
     //[HttpGet]
     //public IEnumerable<string> Get()
     //{
     //  return new string[] { "value1", "value2" };
     //}
 
-    // GET api/<ValuesGet>/5
-    [HttpGet("{id}")]
-    public string Get(int id)
-    {
-      return Program.listOfMessages.GetMessage(id);
-    }
-
-    //// POST api/<ValuesGet>
-    //[HttpPost]
-    //public void Post([FromBody] string value)
+    //// GET api/<SendMessage>/5
+    //[HttpGet("{id}")]
+    //public string Get(int id)
     //{
+    //  return "value";
     //}
 
-    //// PUT api/<ValuesGet>/5
+    // POST api/<SendMessage>
+    [HttpPost]
+    public void Post([FromBody] MessangerLibrary.MessageClass mes)
+    {
+      Console.WriteLine(mes);
+      Program.listOfMessages.AddMessage(mes);
+    }
+
+    //// PUT api/<SendMessage>/5
     //[HttpPut("{id}")]
     //public void Put(int id, [FromBody] string value)
     //{
     //}
 
-    //// DELETE api/<ValuesGet>/5
+    //// DELETE api/<SendMessage>/5
     //[HttpDelete("{id}")]
     //public void Delete(int id)
     //{
