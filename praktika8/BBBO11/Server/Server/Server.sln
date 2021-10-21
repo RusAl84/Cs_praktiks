@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server.csproj", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "..\..\ClassLib\ClassLib\ClassLib.csproj", "{7737DF58-BB52-41AA-AFDF-6D9ED2CD07F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWF", "..\..\ClietWF\ClientWF\ClientWF.csproj", "{DD24AB9F-4A42-4B33-980D-49017D296FD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7737DF58-BB52-41AA-AFDF-6D9ED2CD07F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7737DF58-BB52-41AA-AFDF-6D9ED2CD07F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7737DF58-BB52-41AA-AFDF-6D9ED2CD07F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD24AB9F-4A42-4B33-980D-49017D296FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD24AB9F-4A42-4B33-980D-49017D296FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD24AB9F-4A42-4B33-980D-49017D296FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD24AB9F-4A42-4B33-980D-49017D296FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
