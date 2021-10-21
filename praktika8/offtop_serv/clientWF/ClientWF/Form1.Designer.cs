@@ -29,11 +29,13 @@ namespace ClientWF
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       this.listBox1 = new System.Windows.Forms.ListBox();
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.button1 = new System.Windows.Forms.Button();
       this.button2 = new System.Windows.Forms.Button();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.SuspendLayout();
       // 
       // listBox1
@@ -72,10 +74,17 @@ namespace ClientWF
       // 
       this.button2.Location = new System.Drawing.Point(579, 536);
       this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(405, 27);
+      this.button2.Size = new System.Drawing.Size(405, 66);
       this.button2.TabIndex = 4;
       this.button2.Text = "button2";
       this.button2.UseVisualStyleBackColor = true;
+      this.button2.Click += new System.EventHandler(this.button2_Click);
+      // 
+      // timer1
+      // 
+      this.timer1.Enabled = true;
+      this.timer1.Interval = 1000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
       // 
       // Form1
       // 
@@ -101,6 +110,7 @@ namespace ClientWF
     private System.Windows.Forms.TextBox textBox2;
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Timer timer1;
   }
 }
 

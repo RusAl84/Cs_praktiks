@@ -18,7 +18,7 @@ namespace offtop_serv.Controllers
     [HttpGet("{id}")]
     public string Get(int id)
     {
-      if (id>0 && id<Program.listOfMessages.Count)
+      if (id>=0 && id<Program.listOfMessages.Count)
       {
         return Program.listOfMessages[id].ToString();
       }
