@@ -34,10 +34,27 @@ namespace ClientWF
         var queryResult = client.Execute(request);
         res = queryResult.Content;
         res = res.Trim('\"');
-        if (res != "Not found")
+        if (res != "Not found") { 
           listBox1.Items.Add(res);
-        pos++;
+          pos++;
+        }
       }
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+      var client = new RestClient("http://localhost:5000");
+      var request = new RestRequest("api/SendMessage", Method.POST);
+      request.RequestFormat = DataFormat.Json;
+      ClassLib.MessageClass mes = new ClassLib.MessageClass()
+      {
+        userName = textBox1.Text,
+        messageText = textBox2.Text,
+        timeStamp = DateTime.Now.ToString()
+
+      };
+      request.AddBody(mes);
+      client.Execute(request);
     }
   }
 }
