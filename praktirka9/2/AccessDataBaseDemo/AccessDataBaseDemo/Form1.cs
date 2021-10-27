@@ -84,7 +84,7 @@ namespace AccessDataBaseDemo
         private void insertButton_Click(object sender, EventArgs e)
         {
             // текст запроса
-            string query = "INSERT INTO Worker (w_name, w_position, w_salary) VALUES ('Валера', 'Технолог UWP', 40000)";
+            string query = "INSERT INTO Worker (w_name, w_position, w_salary) VALUES ('Вадим', 'Arch linux', 40000)";
 
             // создаем объект OleDbCommand для выполнения запроса к БД MS Access
             OleDbCommand command = new OleDbCommand(query, myConnection);
