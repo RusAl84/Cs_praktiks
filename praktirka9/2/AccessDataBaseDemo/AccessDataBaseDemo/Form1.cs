@@ -97,7 +97,7 @@ namespace AccessDataBaseDemo
         private void updateButton_Click(object sender, EventArgs e)
         {
             // текст запроса
-            string query = "UPDATE Worker SET w_salary = 123456 WHERE w_id = 3";
+            string query = "UPDATE Worker SET w_salary = -10000 WHERE w_id = 37";
 
             // создаем объект OleDbCommand для выполнения запроса к БД MS Access
             OleDbCommand command = new OleDbCommand(query, myConnection);
