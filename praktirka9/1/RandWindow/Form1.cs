@@ -9,9 +9,6 @@ using System.Windows.Forms;
 
 namespace RandWindow
 {
-    
-          
-
 
     public partial class Form1 : Form
     {
@@ -63,7 +60,7 @@ namespace RandWindow
             // второй параметр - заголовок окна сообщения "Внимание"
             // MessageBoxButtons.OK - тип размещаемой кнопки на форме сообщения
             // MessageBoxIcon.Information - тип сообщения - будет иметь иконку "информация" и соотвествующее звукововой сигнал
-            MessageBox.Show("Мы не сомневались в вешем безразличии", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Мы не сомневались в вешем решении;)", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
    
