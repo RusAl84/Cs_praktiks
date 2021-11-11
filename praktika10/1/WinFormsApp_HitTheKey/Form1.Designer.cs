@@ -48,11 +48,12 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 135;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1147, 167);
             this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // timer1
             // 
@@ -104,7 +105,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(659, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(698, 20);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "Difficulty";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,7 +125,7 @@
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Hit the keys!";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);

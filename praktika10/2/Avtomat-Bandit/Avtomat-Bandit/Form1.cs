@@ -51,6 +51,7 @@ namespace Avtomat_Bandit
             stop3.Enabled = true;
             IsActive = true; 
             button1.Enabled = false; //Пока барабаны крутятся кнопка "Погнали!"  заблокирована.
+
         }
         private void stop1_Tick(object sender, EventArgs e)
         {
@@ -131,6 +132,11 @@ namespace Avtomat_Bandit
             Init_Counter(numericUpDown1.Value);
             button1.Enabled = true;
             button2.Enabled = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

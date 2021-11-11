@@ -57,5 +57,10 @@ namespace WinFormsApp_HitTheKey
             totalLabel.Text = "Total " + stats.Total;
             accuracyLabel.Text = "Accuracy: " + stats.Accuracy + "%";
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

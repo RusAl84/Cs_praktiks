@@ -50,9 +50,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(50, 276);
+            this.button1.Location = new System.Drawing.Point(67, 340);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 66);
+            this.button1.Size = new System.Drawing.Size(312, 81);
             this.button1.TabIndex = 0;
             this.button1.Text = "Погнали!";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(99, 92);
+            this.label1.Location = new System.Drawing.Point(132, 113);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 147);
+            this.label1.Size = new System.Drawing.Size(166, 181);
             this.label1.TabIndex = 1;
             this.label1.Text = "0";
             // 
@@ -72,9 +74,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(238, 92);
+            this.label2.Location = new System.Drawing.Point(317, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 147);
+            this.label2.Size = new System.Drawing.Size(166, 181);
             this.label2.TabIndex = 2;
             this.label2.Text = "0";
             // 
@@ -82,9 +85,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(377, 92);
+            this.label3.Location = new System.Drawing.Point(503, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 147);
+            this.label3.Size = new System.Drawing.Size(166, 181);
             this.label3.TabIndex = 3;
             this.label3.Text = "0";
             // 
@@ -122,9 +126,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(310, 296);
+            this.label4.Location = new System.Drawing.Point(413, 364);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 29);
+            this.label4.Size = new System.Drawing.Size(213, 36);
             this.label4.TabIndex = 4;
             this.label4.Text = "Баланс:  $100";
             // 
@@ -136,7 +141,8 @@
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(454, 360);
+            this.numericUpDown1.Location = new System.Drawing.Point(605, 443);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             50,
             0,
@@ -148,7 +154,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(44, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(59, 30);
             this.numericUpDown1.TabIndex = 5;
             this.numericUpDown1.Value = new decimal(new int[] {
             5,
@@ -160,9 +166,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(310, 362);
+            this.label5.Location = new System.Drawing.Point(413, 446);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 20);
+            this.label5.Size = new System.Drawing.Size(169, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Выбрать ставку: ";
             // 
@@ -170,18 +177,20 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(310, 398);
+            this.label6.Location = new System.Drawing.Point(413, 490);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(168, 20);
+            this.label6.Size = new System.Drawing.Size(209, 25);
             this.label6.TabIndex = 7;
             this.label6.Text = "Осталось попыток: 0";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(50, 362);
+            this.button2.Location = new System.Drawing.Point(67, 446);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 56);
+            this.button2.Size = new System.Drawing.Size(312, 69);
             this.button2.TabIndex = 8;
             this.button2.Text = "Сделать ставку";
             this.button2.UseVisualStyleBackColor = true;
@@ -189,9 +198,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 462);
+            this.ClientSize = new System.Drawing.Size(805, 569);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -202,10 +211,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Однорукий Бандит";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
