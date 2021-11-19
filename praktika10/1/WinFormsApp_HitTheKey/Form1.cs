@@ -20,6 +20,7 @@ namespace WinFormsApp_HitTheKey
             InitializeComponent();
             timer1.Enabled = true; //Делаем таймер активным
             timer1.Start(); //Запускаем таймер 
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
