@@ -22,5 +22,20 @@ namespace MathTaskClassLibraryTests
             // сравнение ожидаемого результата с полученным
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void RectangleArea_3and4_12returned()
+        {
+            // исходные данные
+            int a = 3;
+            int b = 4;
+            int expected = 12;
+
+            // получение значения с помощью тестируемого метода
+            Geometry g = new Geometry();
+            int actual = g.RectangleArea(a, b);
+
+            // сравнение ожидаемого результата с полученным
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
