@@ -90,11 +90,8 @@ namespace testMonitor
             }
 
 
-            // Пример 2
+            // Пример 2 Monitor.Wait, Monitor.Pulse[All]
             // https://habr.com/ru/post/459514/
-
-
-
             object syncObject = new object();
             void T1()
             {
@@ -119,15 +116,11 @@ namespace testMonitor
                 }
             }
             Console.WriteLine("Exit Lock2");
-
-
             Thread t1 = new Thread(T1);
             t1.Start();
-
             Thread.Sleep(100);
             Thread t2 = new Thread(T2);
             t2.Start();
-
             //Разбор:Установил задержку в 100мс при старте второго потока, специально чтобы гарантировать,
             //что его выполнение начнется позднее.
             //— T1: Line#2 поток стартует
@@ -146,7 +139,6 @@ namespace testMonitor
             //а именно: Monitor не хранит информацию о состоянии, а значит, если вызов метода Pulse
             //до вызова метода Wait может привести к дедлоку. Если такая ситуация возможна,
             //то лучше использовать один из классов семейства ResetEvent.
-
 
         }
     }
